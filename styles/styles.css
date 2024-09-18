@@ -71,16 +71,31 @@ header {
   padding: 10px;
 }
 
+h22 {
+  font-size: 2rem; /* Adjust as needed for size */
+  margin-top: 0px; /* Reduce space above the heading */
+  margin-bottom: 30px; /* Optional: Adjust the space below the heading */
+  line-height: 1.5; /* Adjust line height */
+  opacity: 0.6; /* Adjust for slight transparency */
+}
+
+
+
 /* Section styles */
 .section {
   width: 100%;
-  padding: 50px;
-  text-align: center;
+  max-width: 900px; /* Limit the width for better readability */
+  margin: 0 auto; /* Center the section horizontally */
+  padding: 10px 20px; /* Add padding, with extra on the sides */
+  text-align: left; /* Align text to the left */
   background-color: var(--section-bg); /* Consistent background for all sections */
+  margin-top: 10px;
   margin-bottom: 20px;
   border-radius: 8px; /* Softened edges for all sections */
   color: var(--text); /* Consistent text color for all sections */
+  line-height: 1.6; /* Increase line height for readability */
 }
+
 
 /* Theme Toggle */
 .theme-toggle {
