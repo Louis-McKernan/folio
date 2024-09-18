@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
   background-color: var(--background);
   color: var(--text);
   transition: background-color 0.3s, color 0.3s;
@@ -74,9 +74,10 @@ header {
 h3 {
   font-size: 2rem; /* Adjust as needed for size */
   margin-top: 0px; /* Reduce space above the heading */
-  margin-bottom: 15px; /* Optional: Adjust the space below the heading */
+  margin-bottom: 10px; /* Optional: Adjust the space below the heading */
   line-height: 1.5; /* Adjust line height */
   opacity: 0.6; /* Adjust for slight transparency */
+  text-align:center;
 }
 
 
@@ -90,10 +91,10 @@ h3 {
   text-align: left; /* Align text to the left */
   background-color: var(--section-bg); /* Consistent background for all sections */
   margin-top: 10px;
-  margin-bottom: 20px;
-  border-radius: 8px; /* Softened edges for all sections */
+  margin-bottom: 30px;
+  border-radius: 10px; /* Softened edges for all sections */
   color: var(--text); /* Consistent text color for all sections */
-  line-height: 1.6; /* Increase line height for readability */
+  line-height: 1.8; /* Increase line height for readability */
 }
 
 
@@ -189,7 +190,7 @@ footer {
 }
 
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .section {
     padding: 30px;
   }
