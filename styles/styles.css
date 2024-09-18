@@ -1,0 +1,181 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: var(--background);
+  color: var(--text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Horizontally center the content */
+  justify-content: center; /* Center vertically (if needed for larger header) */
+  text-align: center;
+}
+
+:root {
+  --background: #ffffff;
+  --text: #000000;
+  --header-bg: #f0f0f0;
+  --nav-bg: #ddd;
+  --section-bg: #f8f8f8; /* Same background color for all sections */
+  --primary-color: #2196F3;
+}
+
+[data-theme="dark"] {
+  --background: #121212;
+  --text: #ffffff;
+  --header-bg: #1a1a1a;
+  --nav-bg: #333;
+  --section-bg: #2a2a2a; /* Same background for dark mode */
+}
+
+/* Header styles */
+.header-container {
+  display: flex;
+  align-items: center; /* Aligns image and text vertically */
+  justify-content: center; /* Centers everything horizontally */
+  gap: 20px; /* Space between image and text */
+  padding: 20px;
+}
+
+.profile-picture {
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 10px;
+}
+
+/* Navigation styles */
+.navigation {
+  display: flex;
+  justify-content: center;
+  background-color: var(--nav-bg);
+}
+
+.navigation ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navigation a {
+  text-decoration: none;
+  color: var(--text);
+  padding: 10px;
+}
+
+/* Section styles */
+.section {
+  width: 100%;
+  padding: 50px;
+  text-align: center;
+  background-color: var(--section-bg); /* Consistent background for all sections */
+  margin-bottom: 20px;
+  border-radius: 8px; /* Softened edges for all sections */
+  color: var(--text); /* Consistent text color for all sections */
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  display: flex;
+  justify-content: center; /* Horizontally center the toggle */
+  gap: 10px;
+  padding: 10px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+.slider:hover {
+  background-color: #b3b3b3;
+}
+
+/* Icon Opacity and Filter for Dark/Light Mode */
+#sun-icon {
+  opacity: 1;
+  filter: none;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+#moon-icon {
+  opacity: 0.5;
+  filter: brightness(0);
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+[data-theme="dark"] #sun-icon,
+[data-theme="dark"] #moon-icon {
+  filter: invert(1) brightness(1.0);
+}
+
+[data-theme="dark"] #moon-icon {
+  opacity: 1;
+}
+
+[data-theme="dark"] #sun-icon {
+  opacity: 0.5;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: var(--header-bg);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .section {
+    padding: 30px;
+  }
+}
