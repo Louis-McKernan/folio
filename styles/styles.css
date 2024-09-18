@@ -71,10 +71,10 @@ header {
   padding: 10px;
 }
 
-h22 {
+h3 {
   font-size: 2rem; /* Adjust as needed for size */
   margin-top: 0px; /* Reduce space above the heading */
-  margin-bottom: 30px; /* Optional: Adjust the space below the heading */
+  margin-bottom: 15px; /* Optional: Adjust the space below the heading */
   line-height: 1.5; /* Adjust line height */
   opacity: 0.6; /* Adjust for slight transparency */
 }
