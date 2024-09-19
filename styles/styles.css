@@ -25,7 +25,7 @@ header {
   --text: #000000;
   --header-bg: #f0f0f0;
   --nav-bg: #ddd;
-  --section-bg: #f8f8f8; /* Same background color for all sections */
+  --section-bg: #f0f0f0; /* Same background color for all sections */
   --primary-color: #2196F3;
   --skills-bg-color: #e0e0e0; /* Default background for light mode */
   --skills-text-color: #000000; /* Default text color for light mode */
@@ -228,28 +228,38 @@ input:checked + .slider:before {
   background-color: #b3b3b3;
 }
 
-/* Style for the Instagram link and icon */
-.social-link {
-  display: inline-block;
-  margin-top: 10px;
+/* Style for the container holding the icons */
+.social-icons {
+  display: flex;
+  justify-content: space-around; /* Space around each icon */
+  align-items: center; /* Vertically center the icons */
+  margin-top: 20px;
 }
 
-.instagram-icon {
-  width: 40px; /* Adjust icon size */
+.social-link {
+  display: flex; /* Make sure both icons (black/white) are aligned horizontally */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Style for the Instagram and LinkedIn icons */
+.instagram-icon, .linkedin-icon {
+  height: 40px; /* Adjust icon size */
   transition: opacity 0.3s ease; /* Smooth transition between images */
 }
 
 /* Default: Show black icon in light mode, hide white icon */
-#instagram-icon-white {
+#instagram-icon-white, #linkedin-icon-white {
   display: none;
 }
 
 /* When in dark mode, hide the black icon and show the white icon */
-[data-theme="dark"] #instagram-icon-black {
+[data-theme="dark"] #instagram-icon-black, [data-theme="dark"] #linkedin-icon-black {
   display: none;
 }
 
-[data-theme="dark"] #instagram-icon-white {
+[data-theme="dark"] #instagram-icon-white, [data-theme="dark"] #linkedin-icon-white {
   display: inline-block;
 }
 
