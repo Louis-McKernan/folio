@@ -27,6 +27,8 @@ header {
   --nav-bg: #ddd;
   --section-bg: #f8f8f8; /* Same background color for all sections */
   --primary-color: #2196F3;
+  --skills-bg-color: #e0e0e0; /* Default background for light mode */
+  --skills-text-color: #000000; /* Default text color for light mode */
 }
 
 [data-theme="dark"] {
@@ -35,6 +37,8 @@ header {
   --header-bg: #1a1a1a;
   --nav-bg: #333;
   --section-bg: #2a2a2a; /* Same background for dark mode */
+  --skills-bg-color: #404040; /* Background color for dark mode */
+  --skills-text-color: #ffffff; /* Text color for dark mode */
 }
 
 /* Header styles */
@@ -74,11 +78,13 @@ header {
 h3 {
   font-size: 2rem; /* Adjust as needed for size */
   margin-top: 0px; /* Reduce space above the heading */
-  margin-bottom: 10px; /* Optional: Adjust the space below the heading */
+  margin-bottom: 10px; /* Adjust the space below the heading */
   line-height: 1.5; /* Adjust line height */
   opacity: 0.6; /* Adjust for slight transparency */
-  text-align:center;
+  text-align: center; /* Center the text */
+  letter-spacing: 0.4em; /* Add space between the letters */
 }
+
 
 
 
@@ -95,6 +101,69 @@ h3 {
   border-radius: 10px; /* Softened edges for all sections */
   color: var(--text); /* Consistent text color for all sections */
   line-height: 1.8; /* Increase line height for readability */
+}
+
+.project {
+  padding-top: 1%;
+  display: flex; /* Align items in a row */
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Space between the image and the details */
+  margin-bottom: 30px; /* Space between projects */
+}
+
+.project-image {
+  max-width: 30%; /* Image will take up 30% of the container's width */
+  height: auto; /* Maintain the aspect ratio */
+  display: block; /* Treats the image like a block element */
+  object-fit: cover; /* Ensures the image fills its container, cropping if necessary */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.project-details {
+  flex: 1; /* Let the details take up the remaining space */
+  align-self: flex-start; /* Ensure the text aligns to the top */
+}
+
+.project:nth-child(even) {
+  flex-direction: row-reverse; /* Flip the project layout for every even project */
+}
+
+.project-details h4 {
+  font-size: 1.5rem; /* Size for the project title */
+  margin-bottom: 10px;
+}
+
+.project-details p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+
+.skills {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skills li {
+  background-color: var(--skills-bg-color); /* Use the variable for background */
+  color: var(--skills-text-color); /* Use the variable for text color */
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--primary-color); /* Customize based on your theme */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 
