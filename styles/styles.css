@@ -225,6 +225,32 @@ input:checked + .slider:before {
   background-color: #b3b3b3;
 }
 
+/* Style for the Instagram link and icon */
+.social-link {
+  display: inline-block;
+  margin-top: 10px;
+}
+
+.instagram-icon {
+  width: 40px; /* Adjust icon size */
+  transition: opacity 0.3s ease; /* Smooth transition between images */
+}
+
+/* Default: Show black icon in light mode, hide white icon */
+#instagram-icon-white {
+  display: none;
+}
+
+/* When in dark mode, hide the black icon and show the white icon */
+[data-theme="dark"] #instagram-icon-black {
+  display: none;
+}
+
+[data-theme="dark"] #instagram-icon-white {
+  display: inline-block;
+}
+
+
 /* Icon Opacity and Filter for Dark/Light Mode */
 #sun-icon {
   opacity: 1;
