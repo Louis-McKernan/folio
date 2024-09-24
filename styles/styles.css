@@ -89,24 +89,8 @@ h2 {
   text-align: left; /* Center the text */
 }
 
-h3::before {
-  content: "{"; /* Add the opening brace */
-  opacity: 0.2; /* Adjust opacity as needed */
-  margin-right: 3px; /* Adjust spacing after the } */
-  font-weight: 100;
-}
-
-h3::after {
-  content: "}"; /* Add the closing brace */
-  display: inline-block; /* Ensures the } stays inline with the text */
-  margin-left: 3px; /* Adjust spacing after the } */
-  opacity: 0.2; /* Adjust opacity as needed */
-  position: relative;
-  font-weight: 100;
-}
-
 h3 {
-  font-size: 2rem; /* Adjust as needed for size */
+  font-size: 1.7rem; /* Adjust as needed for size */
   margin-top: 0px; /* Reduce space above the heading */
   margin-bottom: 15px; /* Adjust the space below the heading */
   line-height: 1.5; /* Adjust line height */
@@ -217,6 +201,59 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+
+
+/* Collapsible section styling */
+.collapsible {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+/* Hover effect for collapsible section */
+.collapsible:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+}
+
+/* Arrow indicator for collapsible section */
+.collapsible::after {
+  content: "▼"; /* Down arrow */
+  font-size: 0.8rem;
+  margin-left: 10px;
+  transition: transform 0.2s ease;
+}
+
+/* Rotate the arrow when the section is open */
+.collapsible.open::after {
+  transform: rotate(180deg); /* Arrow points up */
+}
+
+/* Hide the collapsible content by default */
+.collapsible-content {
+  display: none; /* Hidden by default */
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
+}
+
+/* When the collapsible is active/open, display content */
+.collapsible-content.active {
+  display: block;
+  max-height: 500px; /* Adjust the max height as needed */
+  transition: max-height 0.3s ease-in-out; /* Smooth transition */
+}
+
+/* Style when the collapsible is open */
+.collapsible.open {
+  font-weight: bold;
+}
+
+
 
 
 /* Theme Toggle */

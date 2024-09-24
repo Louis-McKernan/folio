@@ -1,13 +1,14 @@
 {
-    "about": [
-      {
-        "Content": "I am driven by one of humanity's most distinctive traits - the desire to create. As a Maker by trade and by heart, I am always seeking new challenges and achievements. Whether it's writing code, creating art, or finding innovative uses for old technology, I relish the process of discovery and creation. I also have a passion for reverse engineering, as I find it fascinating to uncover the mysteries behind how things were made and the reasoning behind it, which I then use to inspire my own unique ideas."
-      }
-    ],
-    "projects": [
+  "about": [
+    {
+      "content": "I am driven by one of humanity's most distinctive traits - the desire to create. As a Maker by trade and by heart, I am always seeking new challenges and achievements. Whether it's writing code, creating art, or finding innovative uses for old technology, I relish the process of discovery and creation. I also have a passion for reverse engineering, as I find it fascinating to uncover the mysteries behind how things were made and the reasoning behind it, which I then use to inspire my own unique ideas."
+    }
+  ],
+  "projects": {
+    "business": [
       {
         "title": "Katapult Labs",
-        "subtitle":"Terminal",
+        "subtitle": "Terminal",
         "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
         "images": [
           "img/Katapult_Terminal.jpg",
@@ -24,10 +25,12 @@
           "CAD Design",
           "Headless Browser"
         ]
-      },
+      }
+    ],
+    "community": [
       {
         "title": "Opensource 3D Scanner",
-        "subtitle":"Laser Scanner",
+        "subtitle": "Laser Scanner",
         "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
         "images": [
           "img/laser_scanner.jpg",
@@ -43,10 +46,12 @@
           "CAD Design",
           "Headless Browser"
         ]
-      },
+      }
+    ],
+    "personal": [
       {
         "title": "Stranger Things",
-        "subtitle":"Remote Controlled Prop",
+        "subtitle": "Remote Controlled Prop",
         "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
         "images": [
           "img/stranger_things.jpg",
@@ -64,19 +69,20 @@
           "Headless Browser"
         ]
       }
-    ],
-    "contact": [
-      {
-        "platform": "Instagram",
-        "url": "https://www.instagram.com/leftbrainco/",
-        "icon_black": "img/Instagram_Glyph_Black2.png",
-        "icon_white": "img/Instagram_Glyph_White2.png"
-      },
-      {
-        "platform": "LinkedIn",
-        "url": "https://www.linkedin.com/in/louis-mckernan-6378257a/",
-        "icon_black": "img/linkedin_blue.png",
-        "icon_white": "img/linkedin_blue.png"
-      }
     ]
-  }  
+  },
+  "contact": [
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/leftbrainco/",
+      "icon_black": "img/Instagram_Glyph_Black2.png",
+      "icon_white": "img/Instagram_Glyph_White2.png"
+    },
+    {
+      "platform": "LinkedIn",
+      "url": "https://www.linkedin.com/in/louis-mckernan-6378257a/",
+      "icon_black": "img/linkedin_blue.png",
+      "icon_white": "img/linkedin_blue.png"
+    }
+  ]
+}

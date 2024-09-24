@@ -11,13 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     if (theme === 'dark') {
       moonIcon.style.opacity = '1';
       sunIcon.style.opacity = '0.5';
-      // Show night (white) icons, hide day (black) icons
       document.querySelectorAll('.icon-black').forEach(icon => icon.style.display = 'none');
       document.querySelectorAll('.icon-white').forEach(icon => icon.style.display = 'inline');
     } else {
       moonIcon.style.opacity = '0.5';
       sunIcon.style.opacity = '1';
-      // Show day (black) icons, hide night (white) icons
       document.querySelectorAll('.icon-black').forEach(icon => icon.style.display = 'inline');
       document.querySelectorAll('.icon-white').forEach(icon => icon.style.display = 'none');
     }
@@ -42,13 +40,29 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(data => {
       // Populate the about section
       const aboutContainer = document.getElementById('about');
-      aboutContainer.querySelector('p').textContent = data.about[0].Content;
+      aboutContainer.querySelector('p').textContent = data.about[0].content;
 
-      // Populate the projects section
-      const projectsContainer = document.getElementById('projects-container');
-      data.projects.forEach(project => {
+      // Populate each project section separately
+
+      // Business Projects
+      const businessContainer = document.querySelector('.business-container');
+      data.projects.business.forEach(project => {
         const projectHTML = createProjectHTML(project);
-        projectsContainer.appendChild(projectHTML);
+        businessContainer.appendChild(projectHTML);
+      });
+
+      // Community Projects
+      const communityContainer = document.querySelector('.community-container');
+      data.projects.community.forEach(project => {
+        const projectHTML = createProjectHTML(project);
+        communityContainer.appendChild(projectHTML);
+      });
+
+      // Personal Projects
+      const personalContainer = document.querySelector('.personal-container');
+      data.projects.personal.forEach(project => {
+        const projectHTML = createProjectHTML(project);
+        personalContainer.appendChild(projectHTML);
       });
 
       // Populate the contact section
@@ -62,19 +76,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const imgBlack = document.createElement('img');
         imgBlack.src = contact.icon_black;
         imgBlack.alt = `${contact.platform} Icon Black`;
-        imgBlack.classList.add('icon-black'); // Day (black) icon class
+        imgBlack.classList.add('icon-black');
 
         const imgWhite = document.createElement('img');
         imgWhite.src = contact.icon_white;
         imgWhite.alt = `${contact.platform} Icon White`;
-        imgWhite.classList.add('icon-white'); // Night (white) icon class
-        imgWhite.style.display = 'none'; // Initially hide night (white) icons
+        imgWhite.classList.add('icon-white');
+        imgWhite.style.display = 'none';
 
-        // Append both black and white icons to the link
         link.appendChild(imgBlack);
         link.appendChild(imgWhite);
-
-        // Append the link to the contact container
         contactContainer.appendChild(link);
       });
 
@@ -111,7 +122,6 @@ function createProjectHTML(project) {
   projectTitle.textContent = `${project.title}`;
   projectDetailsDiv.appendChild(projectTitle);
 
-  // Add project title and subtitle WIP
   const projectSubtitle = document.createElement('h5');
   projectSubtitle.textContent = `${project.subtitle}`;
   projectDetailsDiv.appendChild(projectSubtitle);
@@ -137,3 +147,21 @@ function createProjectHTML(project) {
 
   return projectDiv;
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const collapsibles = document.querySelectorAll('.collapsible');
+
+  collapsibles.forEach(collapsible => {
+    const content = collapsible.nextElementSibling;
+    
+    // Initially expand all sections by default
+    content.classList.add('active');
+    collapsible.classList.add('open');
+
+    // Toggle collapse on click
+    collapsible.addEventListener('click', () => {
+      content.classList.toggle('active');
+      collapsible.classList.toggle('open');
+    });
+  });
+});
