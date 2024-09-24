@@ -23,6 +23,7 @@ header {
 :root {
   --background: #ffffff;
   --text: #000000;
+  --line: rgba(0, 0, 0, .03); /* Transparent Line */
   --header-bg: #f0f0f0;
   --nav-bg: #ddd;
   --section-bg: #f0f0f0; /* Same background color for all sections */
@@ -34,6 +35,7 @@ header {
 [data-theme="dark"] {
   --background: #121212;
   --text: #ffffff;
+  --line: rgba(255, 255, 255, .03); /* Transparent Line */
   --header-bg: #1a1a1a;
   --nav-bg: #333;
   --section-bg: #2a2a2a; /* Same background for dark mode */
@@ -51,10 +53,11 @@ header {
 }
 
 .profile-picture {
-  width: 150px;
+  width: 175px;
   border-radius: 50%;
   margin-top: 10px;
 }
+
 
 /* Navigation styles */
 .navigation {
@@ -75,10 +78,37 @@ header {
   padding: 10px;
 }
 
+
+/*Headding Styles*/
+h2 {
+  font-size: 1.5rem; /* Adjust as needed for size */
+  margin-top: 0px; /* Reduce space above the heading */
+  margin-bottom: 10px; /* Adjust the space below the heading */
+  line-height: 1.0; /* Adjust line height */
+  opacity: 0.6; /* Adjust for slight transparency */
+  text-align: left; /* Center the text */
+}
+
+h3::before {
+  content: "{"; /* Add the opening brace */
+  opacity: 0.2; /* Adjust opacity as needed */
+  margin-right: 3px; /* Adjust spacing after the } */
+  font-weight: 100;
+}
+
+h3::after {
+  content: "}"; /* Add the closing brace */
+  display: inline-block; /* Ensures the } stays inline with the text */
+  margin-left: 3px; /* Adjust spacing after the } */
+  opacity: 0.2; /* Adjust opacity as needed */
+  position: relative;
+  font-weight: 100;
+}
+
 h3 {
   font-size: 2rem; /* Adjust as needed for size */
   margin-top: 0px; /* Reduce space above the heading */
-  margin-bottom: 10px; /* Adjust the space below the heading */
+  margin-bottom: 15px; /* Adjust the space below the heading */
   line-height: 1.5; /* Adjust line height */
   opacity: 0.6; /* Adjust for slight transparency */
   text-align: center; /* Center the text */
@@ -86,12 +116,10 @@ h3 {
 }
 
 
-
-
 /* Section styles */
 .section {
   width: 100%;
-  max-width: 500px; /* Limit the width for better readability */
+  max-width: 550px; /* Limit the width for better readability */
   margin: 0 auto; /* Center the section horizontally */
   padding: 10px 20px; /* Add padding, with extra on the sides */
   text-align: left; /* Align text to the left */
@@ -106,8 +134,14 @@ h3 {
 .project {
   display: flex; /* Align project items in a row */
   align-items: flex-start; /* Align items at the top */
-  gap: 20px; /* Space between the image and the details */
-  margin-bottom: 30px; /* Space between projects */
+  gap: 15px; /* Space between the image and the details */
+  margin-bottom: 20px; /* Space between projects */
+  padding-bottom: 10px; /* Add some space between the content and the border */
+  border-bottom: 2px solid var(--line); /* Semi-transparent thin line */
+}
+
+.project:last-child {
+  border-bottom: none; /* Remove the border from the last project */
 }
 
 .image-container {
@@ -115,6 +149,7 @@ h3 {
   flex-direction: column; /* Stack images vertically */
   gap: 10px; /* Space between the stacked images */
   max-width: 30%;
+  align-self:center; /*set images to center within the box*/
 }
 
 .project-image {
@@ -134,14 +169,15 @@ h3 {
 .project-details h4 {
   font-size: 1.5rem; /* Size for the project title */
   margin-bottom: 0; /* No space below the title */
-  line-height: 1.2; /* Adjust line-height for tighter control */
+  margin-top: 0;
+  line-height: 1.1; /* Adjust line-height for tighter control */
 }
 
 .project-details h5 {
   font-size: 1rem; /* Size for the project subtitle */
   margin-top: 0; /* No space above the subtitle */
   line-height: 1.4; /* Ensure consistent line-height */
-  opacity: 0.5; /* Reduce opacity for visual distinction */
+  opacity: 0.7; /* Reduce opacity for visual distinction */
   padding: 0; /* Remove any padding */
 }
 
@@ -150,6 +186,9 @@ h3 {
   line-height: 1.6;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-style: italic;
+  font-weight:50;
+  opacity: .5;
 }
 
 .skills {
@@ -165,7 +204,7 @@ h3 {
   color: var(--skills-text-color); /* Use the variable for text color */
   padding: 5px 10px;
   border-radius: 5px;
-  font-size: 0.9rem;
+  font-size: 0.7rem;
 }
 
 a {
