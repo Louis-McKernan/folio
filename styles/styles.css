@@ -133,14 +133,24 @@ h3 {
 
 .project-details h4 {
   font-size: 1.5rem; /* Size for the project title */
-  margin-bottom: 10px;
+  margin-bottom: 0; /* No space below the title */
+  line-height: 1.2; /* Adjust line-height for tighter control */
+}
+
+.project-details h5 {
+  font-size: 1rem; /* Size for the project subtitle */
+  margin-top: 0; /* No space above the subtitle */
+  line-height: 1.4; /* Ensure consistent line-height */
+  opacity: 0.5; /* Reduce opacity for visual distinction */
+  padding: 0; /* Remove any padding */
 }
 
 .project-details p {
   margin-bottom: 10px;
   line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
 
 .skills {
   list-style-type: none;
@@ -230,17 +240,26 @@ input:checked + .slider:before {
 
 /* Style the social icons container */
 .social-icons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center all items */
   gap: 20px; /* Space between items */
-  justify-content: center; /* Center items when there's an odd number */
-  margin-top: 20px; /* Optional margin */
+}
+
+/* Each link (social icon container) */
+.social-link {
+  flex: 0 1 45%; /* Take up 45% of the row width to have two per row */
+  display: flex;
+  justify-content: center; /* Center the content inside the link container */
+  align-items: center;
+  margin-bottom: 20px; /* Add some bottom margin for spacing between rows */
 }
 
 /* Ensure the images have consistent size */
-.social-icons img {
+.social-link img {
   height: 35px;
 }
+
 
 .social-link {
   display: flex; /* Make sure both icons (black/white) are aligned horizontally */

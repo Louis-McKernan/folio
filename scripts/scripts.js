@@ -108,8 +108,13 @@ function createProjectHTML(project) {
 
   // Add project title and subtitle
   const projectTitle = document.createElement('h4');
-  projectTitle.textContent = `${project.title} - ${project.subtitle}`;
+  projectTitle.textContent = `${project.title}`;
   projectDetailsDiv.appendChild(projectTitle);
+
+  // Add project title and subtitle WIP
+  const projectSubtitle = document.createElement('h5');
+  projectSubtitle.textContent = `${project.subtitle}`;
+  projectDetailsDiv.appendChild(projectSubtitle);
 
   // Add project description
   const projectDescription = document.createElement('p');
