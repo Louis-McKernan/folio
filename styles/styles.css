@@ -228,12 +228,18 @@ input:checked + .slider:before {
   background-color: #b3b3b3;
 }
 
-/* Style for the container holding the icons */
+/* Style the social icons container */
 .social-icons {
-  display: flex;
-  justify-content: space-around; /* Space around each icon */
-  align-items: center; /* Vertically center the icons */
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 20px; /* Space between items */
+  justify-content: center; /* Center items when there's an odd number */
+  margin-top: 20px; /* Optional margin */
+}
+
+/* Ensure the images have consistent size */
+.social-icons img {
+  height: 35px;
 }
 
 .social-link {
