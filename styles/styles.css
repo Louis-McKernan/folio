@@ -90,14 +90,22 @@ h2 {
 }
 
 h3 {
-  font-size: 1.7rem; /* Adjust as needed for size */
-  margin-top: 0px; /* Reduce space above the heading */
-  margin-bottom: 15px; /* Adjust the space below the heading */
-  line-height: 1.5; /* Adjust line height */
-  opacity: 0.6; /* Adjust for slight transparency */
-  text-align: center; /* Center the text */
-  letter-spacing: 0.4em; /* Add space between the letters */
+  font-size: clamp(1rem, 5vw, 1.7rem); /* Min 1rem, scales with 5vw, max 1.7rem */
+  margin-top: 0px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+  opacity: 0.6;
+  text-align: center;
+  letter-spacing: 0.4em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+  max-width: 100%;
 }
+
+
+
 
 
 /* Section styles */
@@ -115,14 +123,21 @@ h3 {
   line-height: 1.8; /* Increase line height for readability */
 }
 
+/* Section for consistent project layout */
 .project {
-  display: flex; /* Align project items in a row */
-  align-items: flex-start; /* Align items at the top */
-  gap: 15px; /* Space between the image and the details */
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 15px; /* Space between the elements */
   margin-bottom: 20px; /* Space between projects */
   padding-bottom: 10px; /* Add some space between the content and the border */
   border-bottom: 2px solid var(--line); /* Semi-transparent thin line */
 }
+
+/* Title and subtitle at the top */
+.project-details {
+  text-align: left;
+}
+
 
 .project:last-child {
   border-bottom: none; /* Remove the border from the last project */
@@ -130,24 +145,21 @@ h3 {
 
 .image-container {
   display: flex;
-  flex-direction: column; /* Stack images vertically */
+  flex-wrap: wrap;
   gap: 10px; /* Space between the stacked images */
-  max-width: 30%;
+  justify-content: center;
+  max-width: 100%;
   align-self:center; /*set images to center within the box*/
 }
 
 .project-image {
-  max-width: 100%; /* Image takes full width of the container */
+  max-height: 150px; /* Limit the width of each image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px; /* Optional: Rounded corners */
 }
 
 .project-details {
-  flex: 1; /* Let the details take up the remaining space */
-}
-
-.project:nth-child(even) {
-  flex-direction: row-reverse; /* Flip the project layout for every even project */
+  text-align: left;
 }
 
 .project-details h4 {
@@ -224,7 +236,7 @@ a:hover {
 .collapsible::after {
   content: "▼"; /* Down arrow */
   font-size: 0.8rem;
-  margin-left: 10px;
+  margin-left: 0px;
   transition: transform 0.2s ease;
 }
 
@@ -244,7 +256,7 @@ a:hover {
 /* When the collapsible is active/open, display content */
 .collapsible-content.active {
   display: block;
-  max-height: 500px; /* Adjust the max height as needed */
+  max-height: max-content; /* Adjust the max height as needed */
   transition: max-height 0.3s ease-in-out; /* Smooth transition */
 }
 

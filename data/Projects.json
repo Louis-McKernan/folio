@@ -25,6 +25,25 @@
           "CAD Design",
           "Headless Browser"
         ]
+      },
+      {
+        "title": "Opensource 3D Scanner",
+        "subtitle": "Laser Scanner",
+        "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
+        "images": [
+          "img/laser_scanner.jpg",
+          "img/laser_scanner-2.jpg"
+        ],
+        "skills": [
+          "Python",
+          "RFID Integration",
+          "Database Management",
+          "Raspberry Pi",
+          "Selenium - RPA",
+          "Laser Cutter",
+          "CAD Design",
+          "Headless Browser"
+        ]
       }
     ],
     "community": [
