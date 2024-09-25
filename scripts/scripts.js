@@ -42,28 +42,20 @@ document.addEventListener('DOMContentLoaded', () => {
       const aboutContainer = document.getElementById('about');
       aboutContainer.querySelector('p').textContent = data.about[0].content;
 
-      // Populate each project section separately
+      // Populate each project section with alternating layout
+      console.log('Business Projects:', data.projects.business); // Debugging output
 
       // Business Projects
       const businessContainer = document.querySelector('.business-container');
-      data.projects.business.forEach(project => {
-        const projectHTML = createProjectHTML(project);
-        businessContainer.appendChild(projectHTML);
-      });
+      populateProjects(data.projects.business, businessContainer);
 
       // Community Projects
       const communityContainer = document.querySelector('.community-container');
-      data.projects.community.forEach(project => {
-        const projectHTML = createProjectHTML(project);
-        communityContainer.appendChild(projectHTML);
-      });
+      populateProjects(data.projects.community, communityContainer);
 
       // Personal Projects
       const personalContainer = document.querySelector('.personal-container');
-      data.projects.personal.forEach(project => {
-        const projectHTML = createProjectHTML(project);
-        personalContainer.appendChild(projectHTML);
-      });
+      populateProjects(data.projects.personal, personalContainer);
 
       // Populate the contact section
       const contactContainer = document.querySelector('.social-icons');
@@ -95,15 +87,41 @@ document.addEventListener('DOMContentLoaded', () => {
     .catch(error => console.error('Error fetching the data:', error));
 });
 
-// Function to create the project HTML
-function createProjectHTML(project) {
+// Function to populate projects with alternating layout
+function populateProjects(projects, container) {
+  projects.forEach((project, index) => {
+    console.log('Adding project:', project.title); // Debugging output for each project
+    const projectHTML = createProjectHTML(project, index);
+    container.appendChild(projectHTML);
+  });
+}
+
+// Function to create the project HTML with images under the title and subtitle, but above description and skills
+function createProjectHTML(project, index) {
   const projectDiv = document.createElement('div');
   projectDiv.classList.add('project');
 
-  // Create image container div
+  // Create project details div (Title, Subtitle)
+  const projectDetailsDiv = document.createElement('div');
+  projectDetailsDiv.classList.add('project-details');
+
+  // Add project title
+  const projectTitle = document.createElement('h4');
+  projectTitle.textContent = project.title;
+  projectDetailsDiv.appendChild(projectTitle);
+
+  // Add project subtitle
+  const projectSubtitle = document.createElement('h5');
+  projectSubtitle.textContent = project.subtitle;
+  projectDetailsDiv.appendChild(projectSubtitle);
+
+  // Append the projectDetailsDiv (title and subtitle) to projectDiv
+  projectDiv.appendChild(projectDetailsDiv);
+
+  // Create image container div (Images go here)
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('image-container');
-
+  
   // Add images to image container
   project.images.forEach(imageSrc => {
     const img = document.createElement('img');
@@ -113,25 +131,15 @@ function createProjectHTML(project) {
     imageContainer.appendChild(img);
   });
 
-  // Create project details div
-  const projectDetailsDiv = document.createElement('div');
-  projectDetailsDiv.classList.add('project-details');
+  // Append the image container (images under the title/subtitle, above description/skills)
+  projectDiv.appendChild(imageContainer);
 
-  // Add project title and subtitle
-  const projectTitle = document.createElement('h4');
-  projectTitle.textContent = `${project.title}`;
-  projectDetailsDiv.appendChild(projectTitle);
-
-  const projectSubtitle = document.createElement('h5');
-  projectSubtitle.textContent = `${project.subtitle}`;
-  projectDetailsDiv.appendChild(projectSubtitle);
-
-  // Add project description
+  // Create project description div
   const projectDescription = document.createElement('p');
   projectDescription.textContent = project.description;
-  projectDetailsDiv.appendChild(projectDescription);
+  projectDiv.appendChild(projectDescription);
 
-  // Add skills list
+  // Create skills list
   const skillsList = document.createElement('ul');
   skillsList.classList.add('skills');
   project.skills.forEach(skill => {
@@ -139,14 +147,13 @@ function createProjectHTML(project) {
     skillItem.textContent = skill;
     skillsList.appendChild(skillItem);
   });
-  projectDetailsDiv.appendChild(skillsList);
-
-  // Add image container and details to the project div
-  projectDiv.appendChild(imageContainer);
-  projectDiv.appendChild(projectDetailsDiv);
+  
+  // Append skills list below the description
+  projectDiv.appendChild(skillsList);
 
   return projectDiv;
 }
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const collapsibles = document.querySelectorAll('.collapsible');
