@@ -226,8 +226,6 @@ a:hover {
 /* Collapsible section styling */
 .collapsible {
   cursor: pointer;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 10px 0;
   transition: background-color 0.2s ease;
