@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // Fetch the JSON file and populate the about, projects, and contact sections
-  fetch('data/Projects.json')
+  fetch('data/Projects.json', { cache: 'no-store' })
     .then(response => response.json())
     .then(data => {
       // Populate the about section

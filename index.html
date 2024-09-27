@@ -64,6 +64,12 @@
     <p>&copy; 2024 Louis McKernan</p>
   </footer>
   <!-- Link to external JavaScript file -->
+  <script>
+    const timestamp = new Date().getTime();
+    const script = document.createElement('script');
+    script.src = `scripts/scripts.js?v=${timestamp}`;
+    document.head.appendChild(script);
+  </script>
   <script src="scripts/scripts.js?v=1.2"></script>
 </body>
 </html>
