@@ -281,11 +281,6 @@ a:hover {
   font-weight: bold;
 }
 
-.collapsible-content.active {
-  max-height: 500px; /* Large enough to accommodate full content */
-}
-
-
 /* Theme Toggle */
 .theme-toggle {
   display: flex;
