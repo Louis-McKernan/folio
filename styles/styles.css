@@ -249,10 +249,11 @@ a:hover {
 
 /* Arrow indicator for collapsible section */
 .collapsible::after {
-  content: "▼"; /* Down arrow */
+  content: "▲"; /* Down arrow */
   font-size: 0.8rem;
   margin-left: 0px;
   transition: transform 0.2s ease;
+  display: inline-block; /* Ensures the arrow stays in line */
 }
 
 /* Rotate the arrow when the section is open */
@@ -280,7 +281,9 @@ a:hover {
   font-weight: bold;
 }
 
-
+.collapsible-content.active {
+  max-height: 500px; /* Large enough to accommodate full content */
+}
 
 
 /* Theme Toggle */
