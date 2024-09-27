@@ -7,7 +7,7 @@
   "projects": {
     "business": [
       {
-        "title": "Katapult Labs2",
+        "title": "Katapult Labs",
         "subtitle": "Terminal",
         "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
         "images": [
@@ -27,7 +27,7 @@
         ]
       },
       {
-        "title": "Opensource 3D Scanner 2",
+        "title": "Opensource 3D Scanner",
         "subtitle": "Laser Scanner",
         "description": "This project involved building a custom sign-in terminal for Katapult Lab's Libratorium (Maker Space), allowing members to sign in using an RFID card. The system logs the entry time and stores it in a central database for monitoring lab usage.",
         "images": [
