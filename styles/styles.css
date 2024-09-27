@@ -48,8 +48,18 @@ header {
   display: flex;
   align-items: center; /* Aligns image and text vertically */
   justify-content: center; /* Centers everything horizontally */
-  gap: 20px; /* Space between image and text */
+  gap: 20px;
   padding: 20px;
+}
+
+/* Title Container - Ensure the titles are aligned to the left */
+.title-container {
+  text-align: left; /* Align the titles to the left */
+}
+
+/* Override for h1 and h2 */
+.title-container h1, .title-container h2 {
+  text-align: left; /* Align h1 and h2 to the left */
 }
 
 .profile-picture {
