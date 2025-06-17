@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
     content.classList.add('active');
     collapsible.classList.add('open');
 
-    // Toggle collapse on click
+    // Toggle collapse on click feature
     collapsible.addEventListener('click', () => {
       content.classList.toggle('active');
       collapsible.classList.toggle('open');
