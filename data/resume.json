@@ -1,116 +1,92 @@
 {
-    "personal_information": {
-      "name": "Louis Cayle McKernan",
-      "phone": "214.793.2563",
-      "email": "Louis_McKernan@Outlook.com",
-      "professional_summary": "A seasoned technologist with over 16 years of experience in automation and a deep focus on AI/ML over the last 3 years. My expertise spans across various technologies, including 7 years of RPA with proficiency in UiPath, Pega Robotics, and strong foundations in various programming languages such as Python, C#, and SQL."
+  "personal_information": {
+    "name": "Louis Cayle McKernan",
+    "phone": "214.793.2563",
+    "email": "Louis_McKernan@Outlook.com",
+    "professional_summary": "A seasoned technologist with over 16 years of experience in automation and a deep focus on AI/ML over the last 3 years. My expertise spans across various technologies, including 7 years of RPA with proficiency in UiPath, Pega Robotics, and strong foundations in various programming languages such as Python, C#, and SQL. I've led projects ranging from real estate fraud detection to dynamic chatbots and machine learning-driven invoice processing, with a consistent focus on AI-driven solutions and enterprise architecture."
+  },
+  "social_links": {
+    "linkedin": "https://www.linkedin.com/in/your-linkedin",
+    "github": "https://github.com/your-profile",
+    "personal_website": "https://louis-mckernan.github.io/Portfolio/"
+  },
+  "education": [
+    {
+      "degree": "Associate of Science",
+      "institution": "IADT Tampa, Fl",
+      "graduation_date": "05 2006"
+    }
+  ],
+  "certifications": [
+    {
+      "name": "UiPath Advanced RPA Developer"
     },
-    "social_links": {
-      "linkedin": "https://www.linkedin.com/in/your-linkedin",
-      "github": "https://github.com/your-profile",
-      "personal_website": "https://louis-mckernan.github.io/Portfolio/"
+    {
+      "name": "Practical Data Science - Sage Maker"
     },
-    "education": [
-      {
-        "degree": "Associate of Science",
-        "institution": "IADT Tampa, Fl",
-        "graduation_date": "05 2006"
-      }
-    ],
-    "certifications": [
-      {
-        "name": "UiPath Advanced RPA Developer"
-      },
-      {
-        "name": "Practical Data Science - Sage Maker"
-      },
-      {
-        "name": "Na Ali’i Challenge Coin"
-      }
-    ],
-    "professional_experience": [
-      {
-        "company": "Progress Residential",
-        "position": "Intelligent Automation Architect",
-        "start_date": "04 2022",
-        "end_date": "02 2024",
-        "responsibilities": [
-          "Spearheaded the design and development of intelligent automation architectures.",
-          "Led technical direction for both US-based and offshore teams.",
-          "Incorporated AI/ML and process automation into projects."
-        ],
-        "contacts": [
-          {
-            "first_name": "John",
-            "last_name": "Doe",
-            "title": "Director of Automation",
-            "email": "johndoe@progressresidential.com",
-            "phone": "123-456-7890"
-          },
-          {
-            "first_name": "Jane",
-            "last_name": "Smith",
-            "title": "Project Manager",
-            "email": "janesmith@progressresidential.com",
-            "phone": "098-765-4321"
-          }
-        ]
-      },
-      {
-        "company": "Allied Electronics & Automation",
-        "position": "Lead Automation Architect",
-        "start_date": "09 2019",
-        "end_date": "04 2022",
-        "responsibilities": [
-          "Directed end-to-end automation project lifecycle.",
-          "Implemented key performance metrics for business stakeholders."
-        ],
-        "contacts": [
-          {
-            "first_name": "Michael",
-            "last_name": "Johnson",
-            "title": "VP of Engineering",
-            "email": "michaeljohnson@alliedelec.com",
-            "phone": "222-333-4444"
-          },
-          {
-            "first_name": "Emily",
-            "last_name": "Williams",
-            "title": "Senior Automation Engineer",
-            "email": "emilywilliams@alliedelec.com",
-            "phone": "555-666-7777"
-          }
-        ]
-      }
-    ],
-    "skills": {
-      "UiPath": "01 2015",
-      "Python": "01 2018",
-      "SQL": "01 2016",
-      "C#": "01 2015",
-      "Machine Learning": "01 2021"
+    {
+      "name": "Na Ali’i Challenge Coin"
+    }
+  ],
+  "professional_experience": [
+    {
+      "company": "Progress Residential",
+      "position": "Intelligent Automation Architect",
+      "start_date": "04 2022",
+      "end_date": "02 2024",
+      "responsibilities": [
+        "Spearheaded the design and development of intelligent automation architectures.",
+        "Led technical direction for both US-based and offshore teams.",
+        "Developed AI systems for real estate fraud detection and invoice processing.",
+        "Integrated Yardi, Salesforce, and Microsoft systems via APIs."
+      ],
+      "contacts": []
     },
-    "projects": [
-      {
-        "date": "02 2023",
-        "description": "Developed AI-driven real estate fraud detection system using OpenCV.",
-        "type": "Progress Residential"
-      },
-      {
-        "date": "03 2022",
-        "description": "Created Druid chatbot for dynamic customer interaction at Allied Electronics.",
-        "type": "Allied Electronics"
-      },
-      {
-        "date": "01 2019",
-        "description": "Engineered RPA solution for Navy Supply Chain automation.",
-        "type": "Na Ali’i"
-      },
-      {
-        "date": "07 2018",
-        "description": "Developed automation for sentiment analysis at TelStrat.",
-        "type": "TelStrat"
-      }
-    ]
-  }
-  
+    {
+      "company": "Allied Electronics & Automation",
+      "position": "Lead Automation Architect",
+      "start_date": "09 2019",
+      "end_date": "04 2022",
+      "responsibilities": [
+        "Directed end-to-end automation project lifecycle.",
+        "Created a Druid chatbot for website integration using UiPath API.",
+        "Developed systems to synchronize data across vendors and SAP using SQL and OCR."
+      ],
+      "contacts": []
+    }
+  ],
+  "skills": {
+    "UiPath": "01 2015",
+    "Python": "01 2018",
+    "SQL": "01 2016",
+    "C#": "01 2015",
+    "Machine Learning": "01 2021"
+  },
+  "projects": [
+    {
+      "date": "02 2023",
+      "description": "Developed AI-driven real estate fraud detection system using OpenCV, reducing detection-to-resolution from ~30 days to 1-2 days.",
+      "type": "Progress Residential"
+    },
+    {
+      "date": "05 2023",
+      "description": "Created an AI-powered chatbot named Artey deployed to 380,000+ CVS Health users; integrated with systems like Workday and ServiceNow for enterprise automation.",
+      "type": "CVS Health"
+    },
+    {
+      "date": "03 2022",
+      "description": "Created Druid chatbot for dynamic customer interaction on Allied Electronics' website, handling part lookups, quotes, and alerts.",
+      "type": "Allied Electronics"
+    },
+    {
+      "date": "01 2019",
+      "description": "Engineered RPA solution for Navy Supply Chain automation; reduced week-long process to under 30 seconds.",
+      "type": "Na Ali’i"
+    },
+    {
+      "date": "07 2018",
+      "description": "Developed automation for sentiment analysis at TelStrat using various RPA tools and custom C# implementations.",
+      "type": "TelStrat"
+    }
+  ]
+}
